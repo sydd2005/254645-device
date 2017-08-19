@@ -1,0 +1,23 @@
+body {
+	font-size: 15px;
+	line-height: 2;
+	color: #464646;
+	font-weight: 300;
+	font-family: "Open Sans", Arial, sans-serif;
+}
+
+.about > h2 {
+	font-size: 47px;
+	line-height: 1.2;
+	color: #000;
+	font-weight: bold;
+	font-family: Gilroy, Arial, sans-serif;
+}
+
+.product-group-item h3 {
+  font-size: 18px;
+  line-height: 1.2;
+  color: #000;
+  font-weight: bold;
+  font-family: Gilroy, Arial, sans-serif;
+}
