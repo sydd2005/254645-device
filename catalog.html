@@ -7,10 +7,10 @@
 </head>
 <body>
   	<header class="main-header">
-  		<a class="main-header-logo">Device</a>
+  		<a href="index.html" class="main-header-logo">Device</a>
   		<form class="site-search" action="https://echo.htmlacademy.ru">
   			<input type="search" placeholder="Поиск по сайту">
-  			<input type="submit">Найти</input>
+  			<input type="submit" value="Найти">
   		</form>
   		<ul class="user-actions">
   			<li class="user-link"><a href="#">Валентин Петухов</a></li>
@@ -23,7 +23,7 @@
   		<nav class="main-header-navigation">
   			<ul class="navigation-list"
   				<li class="navigation-item">
-  					<span class="drop-menu-trigger">Каталог товаров</span>
+  					<button class="drop-menu-trigger">Каталог товаров</button>
   					<div class="catalog-navigation">
   						<ul class="catalog-navigation-column">
   							<li class="catalog-navigation-item"><a href="#">Виртуальная реальность</a></li>
@@ -48,7 +48,7 @@
 	<main class="container">
 		<h1 class="page-title">Моноподы для селфи</h1>
 		<div class="breadcrumbs">
-				<a href="#">Главная</a>
+				<a href="index.html">Главная</a>
 				<a href="#">Каталог товаров</a>
 				<a class="breadcrumbs-current">Моноподы для селфи</a>
 		</div>
@@ -70,9 +70,6 @@
 							<label class="max-price">до <input name="max-price" type="text" value="5000"></label>
 						</div>
 					</div>
-					<ul>
-						<li class="filter-option"><input type="range" id="price-option"></li>
-					</ul>
 				</fieldset>
 				<fieldset>
 					<legend>Цвет</legend>
@@ -110,6 +107,7 @@
 			</ul>
 		</section>
 		<section class="catalog">
+			<h2 class="visually-hidden">Отфильтрованный и отсортированный каталог товаров</h2>
 			<ul class="catalog-list">
               <li class="catalog-item">
                 <div class="catalog-img">
@@ -152,10 +150,10 @@
               </li>
               <li class="catalog-item">
                 <div class="catalog-img">
-                  <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка 'Следуй за мной'">
+                  <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                 </div>
                 <div class="catalog-price">
-                  <a href="#">Селфи-палка "Следуй за мной"</a>
+                  <a href="#">Селфи-палка «Следуй за мной»</a>
                   <span class="catalog-cost">4900 руб.</span>
                 </div>
                 <div class="catalog-item-hover">
