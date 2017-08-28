@@ -2,26 +2,30 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link href="css/style.css" rel="stylesheet">
 	<title>HTML Academy: Девайс - Внутренняя</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/fonts/gilroy.css" rel="stylesheet">
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   	<header class="main-header">
   		<a href="index.html" class="main-header-logo">Device</a>
   		<form class="site-search" action="https://echo.htmlacademy.ru">
-  			<input type="search" placeholder="Поиск по сайту">
-  			<input type="submit" value="Найти">
+        	<span class="search-icon-addon">Поиск</span>
+  			<input class="search-field" type="search" placeholder="Поиск по сайту">
+  			<input class="search-button" type="submit" value="Найти">
   		</form>
   		<ul class="user-actions">
-  			<li class="user-link"><a href="#">Валентин Петухов</a></li>
-			<li class="logout-link"><a href="#">Выйти</a></li>
+  			<li class="user-link"><a class="action-dashboard" href="#">Валентин Петухов</a></li>
+			<li class="logout-link"><a class="action-logout" href="#">Выйти</a></li>
   		</ul>
   		<ul class="shopping-actions">
-  			<li class="shopping-action-link"><a href="#">Сравнить</a></li>
-  			<li class="shopping-action-link"><a href="#">Корзина</a></li>
+  			<li class="shopping-action-link"><a class="action-compare" href="#">Сравнить</a></li>
+  			<li class="shopping-action-link"><a class="action-cart" href="#">Корзина</a></li>
   		</ul>
   		<nav class="main-header-navigation">
-  			<ul class="navigation-list"
+  			<ul class="navigation-list">
   				<li class="navigation-item">
   					<button class="drop-menu-trigger">Каталог товаров</button>
   					<div class="catalog-navigation">
@@ -91,7 +95,7 @@
 						<input class="filter-option" type="radio" name="bluetooth-toggle" id="bluetooth-btn-2">
 						<label for="bluetooth-btn-2">Нет</label>
 				</fieldset>
-				<button class="filter-button" type="submit">Показать</button>
+				<button class="btn-yellow btn-filter" type="submit">Показать</button>
 			</form>
 		</section>
 		<section class="sorting">
@@ -102,8 +106,8 @@
 				<li class="sorting-category"><a href="#">По популярности</a></li>
 			</ul>
 			<ul class="sorting-order">
-				<li class="sorting-order-item"><a href="#">По возрастанию</a></li>
-				<li class="sorting-order-item active"><a href="#">По убыванию</a></li>
+				<li class="sorting-order-item sorting-order-asc"><a href="#">По возрастанию</a></li>
+				<li class="sorting-order-item sorting-order-desc active"><a href="#">По убыванию</a></li>
 			</ul>
 		</section>
 		<section class="catalog">
@@ -118,8 +122,8 @@
                   <span class="catalog-cost">500 руб.</span>
                 </div>
                 <div class="catalog-item-hover">
-                  <a href="#" class="catalog-item-btn">В корзину</a>
-                  <a href="#" class="catalog-item-add">Добавить к сравнению</a>
+                  <a href="#" class="btn-yellow btn-catalog-add-to-cart">В корзину</a>
+                  <a href="#" class="catalog-compare-add">Добавить к сравнению</a>
                 </div>
               </li>
               <li class="catalog-item">
@@ -131,8 +135,8 @@
                   <span class="catalog-cost">1500 руб.</span>
                 </div>
                 <div class="catalog-item-hover">
-                  <a href="#" class="catalog-item-btn">В корзину</a>
-                  <a href="#" class="catalog-item-add">Добавить к сравнению</a>
+                  <a href="#" class="btn-yellow btn-catalog-add-to-cart">В корзину</a>
+                  <a href="#" class="catalog-compare-add">Добавить к сравнению</a>
                 </div>
               </li>
               <li class="catalog-item">
@@ -144,8 +148,8 @@
                   <span class="catalog-cost">2500 руб.</span>
                 </div>
                 <div class="catalog-item-hover">
-                  <a href="#" class="catalog-item-btn">В корзину</a>
-                  <a href="#" class="catalog-item-add">Добавить к сравнению</a>
+                  <a href="#" class="btn-yellow btn-catalog-add-to-cart">В корзину</a>
+                  <a href="#" class="catalog-compare-add">Добавить к сравнению</a>
                 </div>
               </li>
               <li class="catalog-item">
@@ -157,17 +161,17 @@
                   <span class="catalog-cost">4900 руб.</span>
                 </div>
                 <div class="catalog-item-hover">
-                  <a href="#" class="catalog-item-btn">В корзину</a>
-                  <a href="#" class="catalog-item-add">Добавить к сравнению</a>
+                  <a href="#" class="btn-yellow btn-catalog-add-to-cart">В корзину</a>
+                  <a href="#" class="catalog-compare-add">Добавить к сравнению</a>
                 </div>
               </li>
 			</ul>
 			<ul class="pagination-list">
-				<li class="pagination-item"><a href="#">назад</a></li>
+				<li class="pagination-prev"><a href="#">назад</a></li>
 				<li class="pagination-item pagination-item-current"><a>1</a></li>
 				<li class="pagination-item"><a href="#">2</a></li>
 				<li class="pagination-item"><a href="#">3</a></li>
-				<li class="pagination-item"><a href="#">вперед</a></li>
+				<li class="pagination-next"><a href="#">вперед</a></li>
 			</ul>
 		</section>
 	</main>
@@ -175,11 +179,11 @@
 		<div class="main-footer-top-row">
 			<a class="main-footer-logo">Device</a>
 			<ul class="user-actions">
-				<li class="logout-link"><a href="#">Выйти</a></li>
+				<li class="logout-link"><a class="action-login" href="#">Выйти</a></li>
 			</ul>
 			<ul class="shopping-actions">
-  				<li class="shopping-action-link"><a href="#">Сравнить</a></li>
-  				<li class="shopping-action-link"><a href="#">Корзина</a></li>			
+  				<li class="shopping-action-link"><a class="action-compare" href="#">Сравнить</a></li>
+  				<li class="shopping-action-link"><a class="action-cart" href="#">Корзина</a></li>			
 			</ul>
 		</div>
 		<div class="main-footer-mid-row">
@@ -193,9 +197,9 @@
 		</div>
 		<div class="main-footer-bottom-row">
 			<ul class="footer-social">
-				<li class="social-btn"><a href="#">Facebook</a></li>
-				<li class="social-btn"><a href="#">Instagram</a></li>
-				<li class="social-btn"><a href="#">Twitter</a></li>
+				<li class="social-btn social-fb"><a href="#">Facebook</a></li>
+				<li class="social-btn social-in"><a href="#">Instagram</a></li>
+				<li class="social-btn social-tw"><a href="#">Twitter</a></li>
 			</ul>
 			<a href="https://htmlacademy.ru" class="footer-copyright">HTML Academy</a>
 		</div>
