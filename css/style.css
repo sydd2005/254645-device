@@ -30,6 +30,8 @@ a {
 
 img {
     max-width: 100%;
+    max-height: 100%;
+    display: block;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -528,9 +530,13 @@ li.catalog-navigation-item a {
     color: #000;
 }
 
-.services-slider {
-    background-color: #e5e5e5;
+.services {
+	margin-bottom: 163px;
 }
+
+/*.services-slider {
+    background-color: #e5e5e5;
+}*/
 
 .services-slider-controls label {
     font-family: Gilroy, Arial, sans-serif;
@@ -622,7 +628,14 @@ li.catalog-navigation-item a {
     font-weight: bold;
     line-height: 1.2;
 
+    margin-top: 70px;
+    margin-bottom: 11px;
+
     color: #000;
+}
+
+.brands {
+	margin-bottom: 83px;
 }
 
 .brand-list {
@@ -642,6 +655,11 @@ li.catalog-navigation-item a {
 
     width: 260px;
     height: 100px;
+    margin: 0;
+}
+
+.brand-item-hover {
+	margin: 0;
 }
 
 .brand-item-hover .brand-logo {
@@ -702,6 +720,8 @@ li.catalog-navigation-item a {
     line-height: 1.2;
 
     color: #000;
+       margin-top: 48px;
+    margin-bottom: 39px;
 }
 
 .main-footer {
@@ -810,7 +830,8 @@ li.catalog-navigation-item a {
 
 .main-footer p {
     letter-spacing: normal;
-    min-width: 210px;
+    width: 260px;
+    word-break: break-word;
 }
 
 .services-navigation-item {
@@ -1365,13 +1386,45 @@ main.container {
 }
 
 .services-slider {
+	position: relative;
 	display: flex;
+	/*box-shadow:	inset 0 100px 0 0 #fff;*/
+}
+
+.services-slider::after {
+	position: absolute;
+	content: "";
+	width: 300vw;
+	/*height: 69px;*/
+	top: 100px;
+	left: -100vw;
+	right: 100vw;
+	bottom: -69px;
+	background-color: #e5e5e5;
+	z-index: -1;
 }
 
 .service-slide {
+	position: relative;
 	flex-direction: column;
     padding-left: 116px;
-    padding-right: 275px;
+    padding-right: 325px;
+    background-repeat: no-repeat;
+}
+
+.service-slide:first-child {
+	background-image: url("../img/delivery.svg");
+	background-position: right 67px top 85px;
+}
+
+.service-slide:nth-child(2) {
+	background-image: url("../img/warranty.svg");
+	background-position: right 46px top 61px;
+}
+
+.service-slide:nth-child(3) {
+	background-image: url("../img/credit.svg");
+	background-position: right 70px top 61px;
 }
 
 .services-slider-controls {
@@ -1396,11 +1449,16 @@ main.container {
 
 .about-and-contacts {
 	display: flex;
+	justify-content: space-between;
 	padding-bottom: 20px;
 }
 
-.about {
-	margin-right: 50px;
+.about,
+.contacts {
+    width: 560px;
+    box-shadow: 
+    	inset -480px 0 0 0 #fff, 
+    	inset 0px 7px 0 0 #000;
 }
 
 .main-footer-top-row,
@@ -1416,10 +1474,11 @@ main.container {
 .main-footer-mid-row,
 .main-footer-bottom-row {
 	justify-content: space-between;
+	align-items: center;
 }
 
 .main-footer-mid-row {
-	margin-bottom: 50px;
+	margin-bottom: 33px;
 }
 
 .main-footer-mid-row .services-navigation {
@@ -1442,7 +1501,15 @@ main.container {
 
 .main-footer-bottom-row::before {
 	content: "";
-	width: 27px;
+	height: 7px;
+	width: 80px;
+	background-color: #ffc600;
+}
+
+.main-footer-bottom-row .bottom-right {
+	width: 80px;
+	display: flex;
+	justify-content: flex-end;
 }
 
 .social-btn:not(:last-child) {
