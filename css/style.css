@@ -324,6 +324,7 @@ li.catalog-navigation-item a {
     content: "";
 
     justify-content: space-around;
+    z-index: 1;
 }
 
 .promo-slider-controls label {
@@ -414,6 +415,7 @@ li.catalog-navigation-item a {
     color: #000;
     border: 0;
     background-color: transparent;
+    z-index: 1;
 }
 
 .btn-yellow::before {
@@ -660,7 +662,7 @@ li.catalog-navigation-item a {
 }
 
 .brands {
-    margin-bottom: 83px;
+    margin-bottom: 92px;
 }
 
 .brand-list {
@@ -710,6 +712,8 @@ li.catalog-navigation-item a {
     letter-spacing: normal;
 
     color: #000;
+    padding: 0;
+    margin-top: 66px;
 }
 
 .partner-item {
@@ -1352,7 +1356,8 @@ main.container {
     margin-right: 100px;
 }
 
-.login-link {
+.login-link,
+.logout-link {
     margin-right: 20px;
 }
 
@@ -1362,7 +1367,11 @@ main.container {
     justify-content: flex-end;
 }
 
-.shopping-actions li {
+.main-footer .shopping-actions {
+	margin-left: 21px;
+}
+
+.shopping-actions li:not(:first-child) {
     margin-left: 40px;
 }
 
@@ -1472,21 +1481,30 @@ main.container {
 }
 
 .slide-text {
+	position: relative;
     padding-top: 5px;
     padding-right: 60px;
+}
+
+.slide-text::before {
+	position: absolute;
+	content: "";
+	width: 100px;
+	height: 7px;
+	background-color: #fff;
+	left: 0;
+	top: 55px;
 }
 
 .services-slider {
     position: relative;
 
     display: flex;
-    /*box-shadow: inset 0 100px 0 0 #fff;*/
 }
 
 .services-slider::after {
     position: absolute;
     z-index: -1;
-    /*height: 69px;*/
     top: 100px;
     right: 100vw;
     bottom: -69px;
@@ -1561,15 +1579,40 @@ main.container {
 .about,
 .contacts {
     width: 560px;
+    position: relative;
+}
 
-    box-shadow: inset -480px 0 0 0 #fff,
-    inset 0 7px 0 0 #000;
+.about::before,
+.contacts::before {
+	position: absolute;
+	content: "";
+	width: 80px;
+	height: 7px;
+	background-color: #000;
+}
+
+.about p {
+	margin: 30px 0;
+	padding-right: 75px;
+}
+
+.contacts p {
+	margin: 39px 0;
+}
+
+.about-more {
+	margin-top: 54px;
+}
+
+.write-us {
+	margin-top: 69px;
 }
 
 .main-footer-top-row,
 .main-footer-mid-row,
 .main-footer-bottom-row {
     display: flex;
+    align-items: center;
 }
 
 .main-footer-logo {
@@ -1579,7 +1622,6 @@ main.container {
 .main-footer-mid-row,
 .main-footer-bottom-row {
     justify-content: space-between;
-    align-items: center;
 }
 
 .main-footer-mid-row {
@@ -1626,12 +1668,27 @@ main.container {
     margin-right: 23px;
 }
 
+.overlay {
+	display: none;
+}
+
+.modal-show {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 99;
+}
+
 .modal {
-    position: fixed;
-    left: 50%;
+    position: relative;
 
     width: 960px;
-    margin-left: -480px;
+   	box-shadow: 0 0 10px 10px rgba(0, 0, 0, .1);
 }
 
 .modal-close {
@@ -1641,9 +1698,7 @@ main.container {
 }
 
 .modal-write-us {
-    top: calc(50vh - 277px);
-
-    display: none;
+    /*top: calc(50vh - 277px);*/
 
     padding: 95px 100px 79px;
 
@@ -1697,12 +1752,6 @@ main.container {
 .write-us-form .text-field-message {
     width: 760px;
     height: 156px;
-}
-
-.modal-map {
-    top: calc(50vh - 280px);
-
-    display: none;
 }
 
 .modal-map p {
@@ -1812,7 +1861,7 @@ main.container {
 }
 
 .range-filter {
-    width: 240px;
+    width: 200px;
     padding-top: 40px;
 }
 
@@ -1867,6 +1916,7 @@ main.container {
 
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .catalog-price {
@@ -1877,6 +1927,16 @@ main.container {
 
 .catalog-price a {
     width: 260px;
+}
+
+.filters fieldset {
+	margin-bottom: 25px;
+}
+
+.filters legend {
+	min-width: 200px;
+	padding-top: 13px;
+	border-top: 2px solid #000;
 }
 
 
