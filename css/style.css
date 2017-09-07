@@ -36,7 +36,8 @@ img {
     max-height: 100%;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+/*.visually-hidden:not(:focus):not(:active) {*/
+.visually-hidden {
     position: absolute;
 
     overflow: hidden;
@@ -1087,9 +1088,6 @@ li.catalog-navigation-item a {
 }
 
 .filters fieldset {
-    display: flex;
-    flex-direction: column;
-
     margin: 0;
     padding: 0;
 
@@ -1455,9 +1453,9 @@ main.container {
     flex-shrink: 0;
 }
 
-.slider input[type="radio"] {
+/*.slider input[type="radio"] {
     display: none;
-}
+}*/
 
 .promo-slider {
     margin-top: -15px;
@@ -1839,12 +1837,33 @@ main.container {
     top: 8px;
     left: 0;
 
-    width: 23px;
+    width: 27px;
     height: 23px;
 
     content: "";
 
     background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+}
+
+.filter-input:checked + .filter-checkbox::before {
+	background-image: url("../img/checkbox-on.svg");
+}
+
+.filter-input + label:hover::before {
+	opacity: .6;
+}
+
+.filter-input + label:active::before {
+	opacity: 1;
+}
+
+.filter-input + .filter-checkbox:active::before {
+	background-image: url("../img/checkbox-on.svg");
+}
+
+.filter-input:checked + .filter-checkbox:active::before {
+	background-image: url("../img/checkbox-off.svg");
 }
 
 .filter-radio::before {
@@ -1858,6 +1877,18 @@ main.container {
     content: "";
 
     background-image: url("../img/radio-off.svg");
+}
+
+.filter-input:checked + .filter-radio::before {
+	background-image: url("../img/radio-on.svg");
+}
+
+.filter-input + .filter-radio:active::before {
+	background-image: url("../img/radio-on.svg");
+}
+
+.filter-input:checked + .filter-radio:active::before {
+	background-image: url("../img/radio-off.svg");
 }
 
 .range-filter {
@@ -1882,8 +1913,27 @@ main.container {
     background-color: #91c92f;
 }
 
+.range-controls .toggle {
+	position: absolute;
+	top: -8px;
+	width: 16px;
+	height: 16px;
+	border: 6px solid #fff;
+	border-radius: 50%;
+	background-color: #ababab;
+	box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.range-controls .toggle-min {
+	left: 0;
+}
+
+.range-controls .toggle-max {
+	left: 60%;
+}
+
 .price-controls input {
-    width: 50px;
+    width: 76px;
 }
 
 .catalog-item {
@@ -1930,6 +1980,9 @@ main.container {
 }
 
 .filters fieldset {
+    display: flex;
+    flex-direction: column;
+
 	margin-bottom: 25px;
 }
 
@@ -1937,7 +1990,12 @@ main.container {
 	min-width: 200px;
 	padding-top: 13px;
 	border-top: 2px solid #000;
+	margin-bottom: 18px;
 }
+
+
+
+
 
 
 
