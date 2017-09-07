@@ -359,7 +359,6 @@ li.catalog-navigation-item a {
     line-height: 179.2px;
 
     margin-top: 0;
-    margin-right: -10px;
     margin-bottom: -134px;
 
     text-align: right;
@@ -385,6 +384,7 @@ li.catalog-navigation-item a {
 
 .slide-slogan {
     margin-bottom: 19px;
+    margin-right: -2px;
 }
 
 .slide-short-desc {
@@ -1483,7 +1483,7 @@ main.container {
 .slide-text {
 	position: relative;
     padding-top: 5px;
-    padding-right: 60px;
+    padding-right: 50px;
 }
 
 .slide-text::before {
