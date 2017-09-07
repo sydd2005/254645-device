@@ -269,7 +269,8 @@ li.catalog-navigation-item a {
 }
 
 .navigation-item a,
-.drop-menu-trigger {
+.drop-menu-trigger,
+.drop-menu-trigger-wrapper {
     font-family: Gilroy, Arial, sans-serif;
     font-size: 18px;
     font-weight: bold;
@@ -283,8 +284,17 @@ li.catalog-navigation-item a {
     color: #000;
 }
 
-.navigation-item a:hover,
-.drop-menu-trigger:hover {
+.drop-menu-trigger {
+	color: inherit;
+}
+
+.drop-menu-trigger-wrapper:hover {
+	cursor: pointer;
+	color: rgba(0, 0, 0, .6);
+}
+
+/*.drop-menu-trigger:hover,*/
+.navigation-item a:hover {
     cursor: pointer;
 
     opacity: .6;
@@ -1823,6 +1833,12 @@ main.container {
     margin-bottom: 69px;
 }
 
+.filter-section ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
 .filter-checkbox,
 .filter-radio {
     position: relative;
@@ -1834,7 +1850,7 @@ main.container {
 
 .filter-checkbox::before {
     position: absolute;
-    top: 8px;
+    top: 0;
     left: 0;
 
     width: 27px;
@@ -1868,7 +1884,7 @@ main.container {
 
 .filter-radio::before {
     position: absolute;
-    top: 7px;
+    top: 0;
     left: 0;
 
     width: 25px;
@@ -1893,7 +1909,7 @@ main.container {
 
 .range-filter {
     width: 200px;
-    padding-top: 40px;
+    padding-top: 17px;
 }
 
 .range-controls {
@@ -1904,6 +1920,7 @@ main.container {
     height: 2px;
 
     background-color: #dbdbdb;
+    margin-bottom: 5px;
 }
 
 .range-controls .bar {
@@ -1915,25 +1932,25 @@ main.container {
 
 .range-controls .toggle {
 	position: absolute;
-	top: -8px;
-	width: 16px;
-	height: 16px;
-	border: 6px solid #fff;
+	top: -10px;
+	width: 20px;
+	height: 20px;
+	border: 8px solid #fff;
 	border-radius: 50%;
 	background-color: #ababab;
 	box-shadow: 0 2px 1px 0 #cfcfcf;
 }
 
 .range-controls .toggle-min {
-	left: 0;
+	left: -6px;
 }
 
 .range-controls .toggle-max {
-	left: 60%;
+	left: 54%;
 }
 
 .price-controls input {
-    width: 76px;
+    width: 67px;
 }
 
 .catalog-item {
@@ -1983,7 +2000,7 @@ main.container {
     display: flex;
     flex-direction: column;
 
-	margin-bottom: 25px;
+	margin-bottom: 31px;
 }
 
 .filters legend {
@@ -1992,8 +2009,6 @@ main.container {
 	border-top: 2px solid #000;
 	margin-bottom: 18px;
 }
-
-
 
 
 

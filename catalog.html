@@ -29,22 +29,22 @@
   		  <nav class="main-header-navigation">
   			 <ul class="navigation-list">
   				  <li class="navigation-item">
-              <div class="drop-menu-trigger-wrapper"> 
+              <div class="drop-menu-trigger-wrapper">
                 <button class="drop-menu-trigger">Каталог товаров</button>
-  					 <div class="catalog-navigation">
-  						  <ul class="catalog-navigation-column">
-  							 <li class="catalog-navigation-item"><a href="#">Виртуальная реальность</a></li>
-  							 <li class="catalog-navigation-item"><a href="catalog.html">Моноподы для селфи</a></li>
-  							 <li class="catalog-navigation-item"><a href="#">Экшн-камеры</a></li>
-                </ul>
-  						  <ul class="catalog-navigation-column">
-  							 <li class="catalog-navigation-item"><a href="#">Фитнес-браслеты</a></li>
-  							 <li class="catalog-navigation-item"><a href="#">Умные часы</a></li>
-  						  </ul>
-  						  <ul class="catalog-navigation-column">
-  							 <li class="catalog-navigation-item"><a href="#">Квадрокоптеры</a></li>
-  						  </ul>
-  					 </div>
+                <div class="catalog-navigation">
+                  <ul class="catalog-navigation-column">
+                    <li class="catalog-navigation-item"><a href="#">Виртуальная реальность</a></li>
+                    <li class="catalog-navigation-item"><a href="catalog.html">Моноподы для селфи</a></li>
+                    <li class="catalog-navigation-item"><a href="#">Экшн-камеры</a></li>
+                  </ul>
+                  <ul class="catalog-navigation-column">
+                    <li class="catalog-navigation-item"><a href="#">Фитнес-браслеты</a></li>
+                    <li class="catalog-navigation-item"><a href="#">Умные часы</a></li>
+                  </ul>
+                  <ul class="catalog-navigation-column">
+                    <li class="catalog-navigation-item"><a href="#">Квадрокоптеры</a></li>
+                  </ul>
+                </div>
               </div>
   				  </li>
   				  <li class="navigation-item"><a href="#">Доставка</a></li>
@@ -65,7 +65,7 @@
 			<section class="filters">
 				<h2>Фильтр:</h2>
 				<form class="filter" action="https://echo.htmlacademy.ru" method="get">
-					<fieldset>
+					<fieldset class="filter-section">
 						<legend>Стоимость</legend>
 						<div class="range-filter">
 							<div class="range-controls">
@@ -81,25 +81,43 @@
 							</div>
 						</div>
 					</fieldset>
-					<fieldset>
+					<fieldset class="filter-section">
 						<legend>Цвет</legend>
-						<input class="visually-hidden filter-input" type="checkbox" id="color-option-1" checked>
-						<label class="filter-checkbox" for="color-option-1" tabindex="0">Черный</label>
-						<input class="visually-hidden filter-input" type="checkbox" id="color-option-2">
-						<label class="filter-checkbox" for="color-option-2" tabindex="0">Белый</label>
-						<input class="visually-hidden filter-input" type="checkbox" id="color-option-3" checked>
-						<label class="filter-checkbox" for="color-option-3" tabindex="0">Синий</label>
-						<input class="visually-hidden filter-input" type="checkbox" id="color-option-4" checked>
-						<label class="filter-checkbox" for="color-option-4" tabindex="0">Красный</label>
-						<input class="visually-hidden filter-input" type="checkbox" id="color-option-5">
-						<label class="filter-checkbox" for="color-option-5" tabindex="0">Розовый</label>
+						<ul class="color-options">
+							<li>
+								<input class="visually-hidden filter-input" type="checkbox" id="color-option-1" tabindex="-1" checked>
+								<label class="filter-checkbox" for="color-option-1" tabindex="0">Черный</label>
+							</li>
+							<li>
+								<input class="visually-hidden filter-input" type="checkbox" id="color-option-2" >
+								<label class="filter-checkbox" for="color-option-2" tabindex="0">Белый</label>
+							</li>
+							<li>
+								<input class="visually-hidden filter-input" type="checkbox" id="color-option-3" tabindex="-1" checked>
+								<label class="filter-checkbox" for="color-option-3" tabindex="0">Синий</label>
+							</li>
+							<li>
+								<input class="visually-hidden filter-input" type="checkbox" id="color-option-4" tabindex="-1" checked>
+								<label class="filter-checkbox" for="color-option-4" tabindex="0">Красный</label>
+							</li>
+							<li>
+								<input class="visually-hidden filter-input" type="checkbox" id="color-option-5" tabindex="-1">
+								<label class="filter-checkbox" for="color-option-5" tabindex="0">Розовый</label>
+							</li>
+						</ul>
 					</fieldset>
-					<fieldset>
+					<fieldset class="filter-section">
 						<legend>Bluetooth</legend>
-						<input class="visually-hidden filter-input" type="radio" name="bluetooth-toggle" id="bluetooth-btn-1" checked>
-						<label class="filter-radio" for="bluetooth-btn-1" tabindex="0">Есть</label>
-						<input class="visually-hidden filter-input" type="radio" name="bluetooth-toggle" id="bluetooth-btn-2">
-						<label class="filter-radio" for="bluetooth-btn-2" tabindex="0">Нет</label>
+						<ul class="bluetooth-options">
+							<li>
+								<input class="visually-hidden filter-input" type="radio" name="bluetooth-toggle" id="bluetooth-btn-1" checked>
+								<label class="filter-radio" for="bluetooth-btn-1" tabindex="0">Есть</label>
+							</li>
+							<li>
+								<input class="visually-hidden filter-input" type="radio" name="bluetooth-toggle" id="bluetooth-btn-2">
+								<label class="filter-radio" for="bluetooth-btn-2" tabindex="0">Нет</label>
+							</li>
+						</ul>
 					</fieldset>
 					<button class="btn-yellow btn-filter" type="submit">Показать</button>
 				</form>
