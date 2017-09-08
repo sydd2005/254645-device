@@ -1853,13 +1853,27 @@ main.container {
     top: 0;
     left: 0;
 
-    width: 27px;
+    width: 23px;
     height: 23px;
 
     content: "";
 
     background-image: url("../img/checkbox-off.svg");
     background-repeat: no-repeat;
+    border: 1px solid transparent;
+    background-origin: border-box;
+}
+
+.filter-input:checked + .filter-checkbox::before,
+.filter-input:checked:focus + .filter-checkbox::before {
+    width: 27px;
+}
+
+.filter-input:focus + .filter-checkbox::before {
+    border-radius: 2px;
+    box-shadow:
+        0 0 0 1px #fff,
+        0 0 0 4px highlight;
 }
 
 .filter-input:checked + .filter-checkbox::before {
@@ -1893,6 +1907,16 @@ main.container {
     content: "";
 
     background-image: url("../img/radio-off.svg");
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    border: 1px solid transparent;
+}
+
+.filter-input:focus + .filter-radio::before {
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 1px #fff,
+        0 0 0 4px highlight;
 }
 
 .filter-input:checked + .filter-radio::before {
