@@ -14,7 +14,7 @@ body {
     font-weight: 300;
     line-height: 30px;
 
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 
     margin: 0;
     padding: 0;
@@ -285,12 +285,12 @@ li.catalog-navigation-item a {
 }
 
 .drop-menu-trigger {
-	color: inherit;
+    color: inherit;
 }
 
 .drop-menu-trigger-wrapper:hover {
-	cursor: pointer;
-	color: rgba(0, 0, 0, .6);
+    cursor: pointer;
+    color: rgba(0, 0, 0, .6);
 }
 
 /*.drop-menu-trigger:hover,*/
@@ -321,6 +321,10 @@ li.catalog-navigation-item a {
     position: relative;
 
     min-height: 504px;
+}
+
+.promo-toggle {
+    bottom: 149px;
 }
 
 .promo-slider-controls {
@@ -1376,7 +1380,7 @@ main.container {
 }
 
 .main-footer .shopping-actions {
-	margin-left: 21px;
+    margin-left: 21px;
 }
 
 .shopping-actions li:not(:first-child) {
@@ -1489,19 +1493,19 @@ main.container {
 }
 
 .slide-text {
-	position: relative;
+    position: relative;
     padding-top: 5px;
     padding-right: 50px;
 }
 
 .slide-text::before {
-	position: absolute;
-	content: "";
-	width: 100px;
-	height: 7px;
-	background-color: #fff;
-	left: 0;
-	top: 55px;
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 7px;
+    background-color: #fff;
+    left: 0;
+    top: 55px;
 }
 
 .services-slider {
@@ -1592,28 +1596,28 @@ main.container {
 
 .about::before,
 .contacts::before {
-	position: absolute;
-	content: "";
-	width: 80px;
-	height: 7px;
-	background-color: #000;
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 7px;
+    background-color: #000;
 }
 
 .about p {
-	margin: 30px 0;
-	padding-right: 75px;
+    margin: 30px 0;
+    padding-right: 75px;
 }
 
 .contacts p {
-	margin: 39px 0;
+    margin: 39px 0;
 }
 
 .about-more {
-	margin-top: 54px;
+    margin-top: 54px;
 }
 
 .write-us {
-	margin-top: 69px;
+    margin-top: 69px;
 }
 
 .main-footer-top-row,
@@ -1677,26 +1681,26 @@ main.container {
 }
 
 .overlay {
-	display: none;
+    display: none;
 }
 
 .modal-show {
-	position: fixed;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	z-index: 99;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
 }
 
 .modal {
     position: relative;
 
     width: 960px;
-   	box-shadow: 0 0 10px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, .1);
 }
 
 .modal-close {
@@ -1834,9 +1838,9 @@ main.container {
 }
 
 .filter-section ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .filter-checkbox,
@@ -1877,23 +1881,23 @@ main.container {
 }
 
 .filter-input:checked + .filter-checkbox::before {
-	background-image: url("../img/checkbox-on.svg");
+    background-image: url("../img/checkbox-on.svg");
 }
 
 .filter-input + label:hover::before {
-	opacity: .6;
+    opacity: .6;
 }
 
 .filter-input + label:active::before {
-	opacity: 1;
+    opacity: 1;
 }
 
 .filter-input + .filter-checkbox:active::before {
-	background-image: url("../img/checkbox-on.svg");
+    background-image: url("../img/checkbox-on.svg");
 }
 
 .filter-input:checked + .filter-checkbox:active::before {
-	background-image: url("../img/checkbox-off.svg");
+    background-image: url("../img/checkbox-off.svg");
 }
 
 .filter-radio::before {
@@ -1920,15 +1924,15 @@ main.container {
 }
 
 .filter-input:checked + .filter-radio::before {
-	background-image: url("../img/radio-on.svg");
+    background-image: url("../img/radio-on.svg");
 }
 
 .filter-input + .filter-radio:active::before {
-	background-image: url("../img/radio-on.svg");
+    background-image: url("../img/radio-on.svg");
 }
 
 .filter-input:checked + .filter-radio:active::before {
-	background-image: url("../img/radio-off.svg");
+    background-image: url("../img/radio-off.svg");
 }
 
 .range-filter {
@@ -1955,22 +1959,29 @@ main.container {
 }
 
 .range-controls .toggle {
-	position: absolute;
-	top: -10px;
-	width: 20px;
-	height: 20px;
-	border: 8px solid #fff;
-	border-radius: 50%;
-	background-color: #ababab;
-	box-shadow: 0 2px 1px 0 #cfcfcf;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    background-color: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.range-controls .toggle:active {
+    width: 22px;
+    height: 22px;
+    transform: translate(-1px, -50%);
 }
 
 .range-controls .toggle-min {
-	left: -6px;
+    left: -6px;
 }
 
 .range-controls .toggle-max {
-	left: 54%;
+    left: 54%;
 }
 
 .price-controls input {
@@ -2024,14 +2035,14 @@ main.container {
     display: flex;
     flex-direction: column;
 
-	margin-bottom: 31px;
+    margin-bottom: 31px;
 }
 
 .filters legend {
-	min-width: 200px;
-	padding-top: 13px;
-	border-top: 2px solid #000;
-	margin-bottom: 18px;
+    min-width: 200px;
+    padding-top: 13px;
+    border-top: 2px solid #000;
+    margin-bottom: 18px;
 }
 
 
