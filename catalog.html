@@ -54,17 +54,36 @@
   		  </nav>
       </div>
   	</header>
-	<main class="container sticky-bottom">
+	<!-- <main class="container sticky-bottom"> -->
+	<main>
+		<div class="container">
 		<h1 class="page-title">Моноподы для селфи</h1>
-		<div class="breadcrumbs">
-				<a href="index.html">Главная</a>
-				<a href="#">Каталог товаров</a>
-				<a class="breadcrumbs-current">Моноподы для селфи</a>
+			<div class="breadcrumbs">
+					<a href="index.html">Главная</a>
+					<a href="#">Каталог товаров</a>
+					<a class="breadcrumbs-current">Моноподы для селфи</a>
+			</div>
 		</div>
-		<div class="flex-container">
-			<section class="filters">
+		<div class="row top-row">
+			<div class="top-left">
 				<h2>Фильтр:</h2>
-				<form class="filter" action="https://echo.htmlacademy.ru" method="get">
+			</div>
+				<section class="sorting top-right">
+					<h2>Сортировка:</h2>
+					<ul class="sorting-categories">
+						<li class="sorting-category active"><a href="#">По цене</a></li>
+						<li class="sorting-category"><a href="#">По типу</a></li>
+						<li class="sorting-category"><a href="#">По популярности</a></li>
+					</ul>
+					<ul class="sorting-order">
+						<li class="sorting-order-item sorting-order-asc"><a href="#">По возрастанию</a></li>
+						<li class="sorting-order-item sorting-order-desc active"><a href="#">По убыванию</a></li>
+					</ul>
+				</section>
+		</div>
+		<div class="row bottom-row">
+			<section class="filters bottom-left">
+				<form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
 					<fieldset class="filter-section">
 						<legend>Стоимость</legend>
 						<div class="range-filter">
@@ -122,19 +141,7 @@
 					<button class="btn-yellow btn-filter" type="submit">Показать</button>
 				</form>
 			</section>
-			<div class="sorted-results">
-				<section class="sorting">
-					<h2>Сортировка:</h2>
-					<ul class="sorting-categories">
-						<li class="sorting-category active"><a href="#">По цене</a></li>
-						<li class="sorting-category"><a href="#">По типу</a></li>
-						<li class="sorting-category"><a href="#">По популярности</a></li>
-					</ul>
-					<ul class="sorting-order">
-						<li class="sorting-order-item sorting-order-asc"><a href="#">По возрастанию</a></li>
-						<li class="sorting-order-item sorting-order-desc active"><a href="#">По убыванию</a></li>
-					</ul>
-				</section>
+			<div class="sorted-results bottom-right">
 				<section class="catalog">
 					<h2 class="visually-hidden">Отфильтрованный и отсортированный каталог товаров</h2>
 					<ul class="catalog-list">
@@ -203,7 +210,7 @@
 		</div>
 	</main>
 	<footer class="main-footer">
-    <div class="container">
+    <div class="container main-footer-wrapper">
 		  <div class="main-footer-top-row">
 			<a href="index.html" class="main-footer-logo">Device</a>
 		  	<ul class="user-actions">
