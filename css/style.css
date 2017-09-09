@@ -618,6 +618,7 @@ li.catalog-navigation-item a {
 
 .service-slide {
     display: none;
+    max-width: 876px;
 }
 
 .services-btn-1:checked ~ .services-slider-slides > .service-slide:first-child,
@@ -1594,7 +1595,7 @@ main.container {
 
     border-right: 8px solid #000;
 
-    flex-basis: 284px;
+    width: 284px;
     flex-shrink: 0;
 }
 
@@ -1698,7 +1699,7 @@ main.container {
     background-color: #ffc600;
 }
 
-.copyright-wrapper {
+.main-footer-bottom-row .copyright-wrapper {
     display: flex;
 
     width: 80px;
