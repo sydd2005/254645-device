@@ -2048,6 +2048,23 @@ main.container {
     padding-top: 13px;
 }
 
+.catalog-item-new::after {
+	content: "new";
+	position: absolute;
+	font-family: Gilroy, Arial, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	top: 42px;
+	right: 27px;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	color: rgba(0, 0, 0, .2);
+	border: 2px solid rgba(0, 0, 0, .2);
+	border-radius: 50%;
+}
+
 .catalog-img {
     width: 360px;
     height: 380px;
