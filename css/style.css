@@ -31,7 +31,7 @@ html {
 }
 
 body {
-    font-family: Open Sans, Arial, sans-serif;
+    font-family: 'Open Sans', 'Arial', sans-serif;
     font-size: 15px;
     font-weight: 300;
     line-height: 30px;
@@ -96,7 +96,7 @@ img {
 }
 
 .main-header .main-header-logo {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 48px;
     font-weight: bold;
     line-height: 42px;
@@ -283,7 +283,7 @@ img {
 }
 
 li.catalog-navigation-item a {
-    font-family: Open Sans, Arial, sans-serif;
+    font-family: 'Open Sans', 'Arial', sans-serif;
     font-size: 15px;
     font-weight: 300;
     line-height: 30px;
@@ -297,7 +297,7 @@ li.catalog-navigation-item a {
 .navigation-item a,
 .drop-menu-trigger,
 .drop-menu-trigger-wrapper {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 18px;
     font-weight: bold;
     line-height: 1.2;
@@ -398,8 +398,17 @@ li.catalog-navigation-item a {
     inset 0 0 0 4px #000;
 }
 
+.promo-btn-1:focus ~ .promo-slider-controls > label[for='promo-btn-1'],
+.promo-btn-2:focus ~ .promo-slider-controls > label[for='promo-btn-2'],
+.promo-btn-3:focus ~ .promo-slider-controls > label[for='promo-btn-3'] {
+    box-shadow: inset 0 0 0 3px #fff,
+    inset 0 0 0 4px #000,
+    0 0 0 3px #fff,
+    0 0 0 5px highlight;
+}
+
 .slide-num {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 179.2px;
     font-weight: bold;
     line-height: 179.2px;
@@ -414,7 +423,7 @@ li.catalog-navigation-item a {
 
 .slide-slogan,
 .page-title {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 47px;
     font-weight: bold;
     line-height: 1.2;
@@ -443,7 +452,7 @@ li.catalog-navigation-item a {
 }
 
 .btn-yellow {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 18px;
     font-weight: bold;
     line-height: 30px;
@@ -510,7 +519,7 @@ li.catalog-navigation-item a {
 }
 
 .product-specs td {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 36px;
     font-weight: lighter;
     line-height: 1.2;
@@ -593,7 +602,7 @@ li.catalog-navigation-item a {
 }
 
 .product-group-item h3 {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 18px;
     font-weight: bold;
     line-height: 1.2;
@@ -609,7 +618,7 @@ li.catalog-navigation-item a {
 }
 
 .services-slider-controls label {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 18px;
     font-weight: bold;
     line-height: 1.2;
@@ -663,6 +672,12 @@ li.catalog-navigation-item a {
     display: flex;
 }
 
+.services-btn-1:focus ~ .services-slider-controls label[for='services-btn-1'],
+.services-btn-2:focus ~ .services-slider-controls label[for='services-btn-2'],
+.services-btn-3:focus ~ .services-slider-controls label[for='services-btn-3'] {
+	outline: highlight auto 5px;
+}
+
 .services-slider-controls label:active,
 .services-btn-1:checked ~ .services-slider-controls label[for='services-btn-1'],
 .services-btn-2:checked ~ .services-slider-controls label[for='services-btn-2'],
@@ -695,7 +710,7 @@ li.catalog-navigation-item a {
 }
 
 .service-title {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 47px;
     font-weight: bold;
     line-height: 1.2;
@@ -746,7 +761,7 @@ li.catalog-navigation-item a {
 }
 
 .partners-list {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 16px;
     font-weight: bold;
     line-height: 40px;
@@ -789,7 +804,7 @@ li.catalog-navigation-item a {
 
 .about h2,
 .contacts h2 {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 47px;
     font-weight: bold;
     line-height: 1.2;
@@ -815,14 +830,20 @@ li.catalog-navigation-item a {
 }
 
 .main-footer .main-footer-logo {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 48px;
     font-weight: bold;
     line-height: 1.2;
+    letter-spacing: .01em;
 
     text-transform: uppercase;
 
     color: #ffc600;
+}
+
+.catalog-main-footer .main-footer-logo {
+	margin-top: -6px;
+	padding-bottom: 7px;
 }
 
 .main-footer-logo:hover {
@@ -908,12 +929,12 @@ li.catalog-navigation-item a {
 .main-footer p {
     width: 260px;
 
-    letter-spacing: normal;
+    letter-spacing: 0;
     word-break: break-word;
 }
 
 .services-navigation-item {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 18px;
     font-weight: bold;
     line-height: 1.2;
@@ -938,33 +959,42 @@ li.catalog-navigation-item a {
     font-size: 0;
 }
 
-.social-btn {
-    width: 32px;
-    height: 32px;
+.social-btn a {
+	display: flex;
+    width: 36px;
+    height: 36px;
 
     cursor: pointer;
 
     opacity: .3;
     background-repeat: no-repeat;
+	border: 2px solid transparent;
+	border-radius: 50%;
 }
 
-.social-btn:hover {
+.social-btn a:hover {
     opacity: .6;
 }
 
-.social-btn:active {
+.social-btn a:active {
     opacity: .1;
 }
 
-.social-fb {
+.social-btn a:focus {
+	outline: none;
+
+	box-shadow: 0 0 0 3px highlight;
+}
+
+.social-fb a {
     background-image: url('../img/fb.svg');
 }
 
-.social-in {
+.social-in a {
     background-image: url('../img/instagram.svg');
 }
 
-.social-tw {
+.social-tw a {
     background-image: url('../img/twitter.svg');
 }
 
@@ -989,7 +1019,7 @@ li.catalog-navigation-item a {
 }
 
 .write-us-caption {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 18px;
     font-weight: bold;
     line-height: 18px;
@@ -1057,9 +1087,9 @@ li.catalog-navigation-item a {
 .breadcrumbs a {
     font-size: 14px;
     line-height: 36px;
+    letter-spacing: .01em;
 
-    opacity: .3;
-    color: #000;
+    color: rgba(0, 0, 0, .3);
 }
 
 .breadcrumbs a:not(.breadcrumbs-current) {
@@ -1071,7 +1101,7 @@ li.catalog-navigation-item a {
 .breadcrumbs a:not(.breadcrumbs-current)::after {
     position: absolute;
     top: 15px;
-    right: 17px;
+    right: 18px;
 
     width: 4px;
     height: 7px;
@@ -1090,7 +1120,7 @@ li.catalog-navigation-item a {
 }
 
 .row h2 {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 16px;
     font-weight: bold;
     line-height: 70px;
@@ -1123,7 +1153,7 @@ li.catalog-navigation-item a {
 }
 
 .row legend {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 18px;
     font-weight: bold;
     line-height: 1.2;
@@ -1141,14 +1171,17 @@ li.catalog-navigation-item a {
 .row label {
     font-size: 14px;
     line-height: 40px;
+    letter-spacing: .01em;
+    display: block;
 }
 
 .price-controls label,
 .price-controls input {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 14px;
     font-weight: lighter;
     line-height: 22.27px;
+    display: inline;
 
     letter-spacing: normal;
 
@@ -1169,7 +1202,7 @@ li.catalog-navigation-item a {
     font-size: 14px;
     line-height: 18px;
 
-    letter-spacing: normal;
+    letter-spacing: 0;
 
     color: rgba(0, 0, 0, .3);
 }
@@ -1224,16 +1257,17 @@ li.catalog-navigation-item a {
 }
 
 .catalog-price a {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 18px;
     font-weight: bold;
     line-height: 1.2;
+    letter-spacing: .01em;
 
     color: #000;
 }
 
 .catalog-cost {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 16px;
     font-weight: lighter;
     line-height: 1.2;
@@ -1275,9 +1309,8 @@ li.catalog-navigation-item a {
 
 .pagination-prev,
 .pagination-next {
-    width: 126px;
-
     text-align: center;
+    width: 137px;
 }
 
 .pagination-prev {
@@ -1294,7 +1327,7 @@ li.catalog-navigation-item a {
 }
 
 .pagination-list a {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 16px;
     font-weight: bold;
     line-height: 70px;
@@ -1310,6 +1343,10 @@ li.catalog-navigation-item a {
     text-transform: uppercase;
 
     color: #000;
+}
+
+.pagination-prev a {
+	width: 126px;
 }
 
 .pagination-prev a:hover,
@@ -1369,6 +1406,10 @@ main.container {
 
     background-color: inherit;
     background-origin: padding-box;
+}
+
+.catalog-main-footer .main-footer-wrapper {
+	padding-top: 61px;
 }
 
 .main-header {
@@ -1911,16 +1952,16 @@ main.container {
 }
 
 .sorting .sorting-categories {
-    margin-left: 55px;
+    margin-left: 57px;
     padding: 0;
 }
 
 .sorting-category {
-    margin-right: 30px;
+    margin-right: 31px;
 }
 
 .sorting-order-item {
-    margin-left: 15px;
+    margin-left: 17px;
 }
 
 .filter-section ul {
@@ -1941,7 +1982,7 @@ main.container {
 
 .filter-checkbox::before {
     position: absolute;
-    top: 0;
+    top: 9px;
     left: 0;
 
     width: 23px;
@@ -1988,7 +2029,7 @@ main.container {
 
 .filter-radio::before {
     position: absolute;
-    top: 0;
+    top: 8px;
     left: 0;
 
     width: 25px;
@@ -2089,7 +2130,7 @@ main.container {
 }
 
 .catalog-item-new::after {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: 'Gilroy', 'Arial', sans-serif;
     font-weight: bold;
     line-height: 60px;
 
@@ -2195,7 +2236,7 @@ main.container {
 .top-right,
 .bottom-right {
     width: 852px;
-    padding-right: 20px;
+    padding-right: 18px;
     padding-left: 72px;
 
     flex-shrink: 0;
