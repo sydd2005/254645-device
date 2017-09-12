@@ -7,7 +7,7 @@
 		<title>HTML Academy: Девайс - Внутренняя</title>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
 		<link href="css/normalize.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
+		<link href="css/style.min.css" rel="stylesheet">
 	</head>
 	<body>
 		<header class="main-header container">
@@ -15,8 +15,8 @@
 				<a href="index.html" class="main-header-logo">Device</a>
 				<div class="main-header-top">
 					<form class="site-search" action="https://echo.htmlacademy.ru">
-						<input class="search-field" type="search" placeholder="Поиск по сайту">
-						<input class="search-button" type="submit" value="Найти">
+						<input class="search-field" type="search" placeholder="Поиск по сайту" name="search-field">
+						<input class="search-button" type="submit" value="Найти" tabindex="-1">
 					</form>
 					<ul class="user-actions">
 						<li class="login-link"><a class="menu-btn action-login" href="#">Валентин Петухов</a></li>
@@ -105,23 +105,23 @@
 							<legend>Цвет</legend>
 							<ul class="color-options">
 								<li>
-									<input class="visually-hidden filter-input" type="checkbox" id="color-option-1" checked>
-									<label class="filter-checkbox" for="color-option-1">Черный</label>
+									<input class="visually-hidden filter-input" type="checkbox" id="color-option-1" name="color-option-1" checked>
+									<label class="filter-checkbox" for="color-option-1"><span>Черный</span></label>
 								</li>
 								<li>
-									<input class="visually-hidden filter-input" type="checkbox" id="color-option-2" >
+									<input class="visually-hidden filter-input" type="checkbox" id="color-option-2" name="color-option-2" >
 									<label class="filter-checkbox" for="color-option-2">Белый</label>
 								</li>
 								<li>
-									<input class="visually-hidden filter-input" type="checkbox" id="color-option-3"  checked>
+									<input class="visually-hidden filter-input" type="checkbox" id="color-option-3" name="color-option-3"  checked>
 									<label class="filter-checkbox" for="color-option-3">Синий</label>
 								</li>
 								<li>
-									<input class="visually-hidden filter-input" type="checkbox" id="color-option-4"  checked>
+									<input class="visually-hidden filter-input" type="checkbox" id="color-option-4" name="color-option-4"  checked>
 									<label class="filter-checkbox" for="color-option-4">Красный</label>
 								</li>
 								<li>
-									<input class="visually-hidden filter-input" type="checkbox" id="color-option-5" >
+									<input class="visually-hidden filter-input" type="checkbox" id="color-option-5" name="color-option-5" >
 									<label class="filter-checkbox" for="color-option-5">Розовый</label>
 								</li>
 							</ul>
@@ -130,7 +130,7 @@
 							<legend>Bluetooth</legend>
 							<ul class="bluetooth-options">
 								<li>
-									<input class="visually-hidden filter-input" type="radio" name="bluetooth-toggle" id="bluetooth-btn-1" >
+									<input class="visually-hidden filter-input" type="radio" name="bluetooth-toggle" id="bluetooth-btn-1" checked>
 									<label class="filter-radio" for="bluetooth-btn-1">Есть</label>
 								</li>
 								<li>
@@ -210,7 +210,7 @@
 				</div>
 			</div>
 		</main>
-		<footer class="main-footer">
+		<footer class="main-footer catalog-main-footer">
 			<div class="container main-footer-wrapper">
 				<div class="main-footer-top-row">
 					<a href="index.html" class="main-footer-logo">Device</a>
@@ -238,7 +238,7 @@
 						<li class="social-btn social-tw"><a href="#">Twitter</a></li>
 					</ul>
 					<p class="copyright-wrapper">
-						<a href="https://htmlacademy.ru" class="footer-copyright">HTML Academy</a>
+						<a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-copyright">HTML Academy</a>
 					</p>
 				</div>
 			</div>
